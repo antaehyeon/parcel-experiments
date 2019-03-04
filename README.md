@@ -123,9 +123,55 @@
 
       `.title {` -> `.title:fullscreen {`
 
-      
 
-      
+
+## STEP 4. TypographyJS and Building for Production
+
+1. yarn add [typography](https://kyleamathews.github.io/typography.js/)
+
+2. create new file `typography.js`
+
+   ```javascript
+   import Typography from "typography";
+   
+   const typography = new Typography({
+     baseFontSize: "18px",
+     baseLineHeight: 1.666,
+     googleFonts: [
+       {
+         name: "Montserrant",
+         styles: ["700"]
+       },
+       {
+         name: "Open Sans",
+         styles: ["400"]
+       }
+     ],
+     headerFontFamily: ["Montserrant", "Open Sans", "sans-serif"],
+     bodyFontFamily: ["Open Sans", "sans-serif"]
+   });
+   
+   typography.injectStyles();
+   
+   export default typography;
+   ```
+
+3. add new line to index.js
+
+   `import typography from "./typography";`
+
+4. add new line to package.json (scripts)
+
+   ```json
+     "scripts": {
+       "start": "parcel index.html",
+       "build": "parcel build index.html -d build --public-url ./"
+     }
+   ```
+
+   
+
+
 
 
 
