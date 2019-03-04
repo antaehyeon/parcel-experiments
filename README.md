@@ -5,7 +5,7 @@
 
 - React
 - ES6 with Babel
-- SCSS
+- SCSS -> CSS
 - CSS Modules
 - Typography.js
 - Build for production
@@ -80,7 +80,52 @@
    }
    ```
 
-   
+
+
+## STEP 3. CSS Modules and SCSS with Parcel
+
+1. create `.postcssrc` [postCSS](https://postcss.org/)
+
+   ```
+   {
+       "module": true
+   }
+   ```
+
+2. yarn add postcss-modules
+
+3. yarn global add node-sass
+
+4. Change css -> scss
+
+5. [auto prefixer](https://github.com/postcss/autoprefixer)
+
+   1. yarn add autoprefixer
+
+   2. add plugin (to .postcssrc)
+
+      ```json
+      { 
+          "modules": true,
+          "plugins": {
+              "autoprefixer": {
+                  "browsers": [
+                      "> 1%",
+                      "Last 2 versions",
+                      "IE 10"
+                  ]
+              }
+          }
+      }
+      ```
+
+   3. modify styles.scss
+
+      `.title {` -> `.title:fullscreen {`
+
+      
+
+      
 
 
 

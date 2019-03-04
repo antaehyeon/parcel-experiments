@@ -1,3 +1,4 @@
 import React from "react";
+import styles from "./styles.scss";
 
-export default () => <div>LALALA</div>;
+export default () => <span className={styles.title}>Lalalal</span>;
