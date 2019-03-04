@@ -52,6 +52,38 @@
 
 
 
+## STEP 2. React and ES6 with Parcel
+
+1. Create src/App.js
+
+   ```react
+   import React from "react";
+   
+   export default () => <div>LALALA</div>;
+   ```
+
+2. Create index.js
+
+   ```react
+   import React from "react";
+   import ReactDOM from "react-dom";
+   import App from "./src/App";
+   
+   ReactDOM.render(<App />, document.getElementById("app"));
+   ```
+
+3. Create .babelrc
+
+   ```json
+   {
+     "preset": ["env", "react"]
+   }
+   ```
+
+   
+
+
+
 
 
 
